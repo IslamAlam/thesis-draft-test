@@ -1,0 +1,37 @@
+% frontbackmatter/dirtytitlepage.tex
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+  % 1) Fill the entire page with the background color
+  \fill[ETHBlue] (current page.south west) rectangle (current page.north east);
+
+  % 2) Top-left text block: author and main title
+  \node[
+    anchor=north west,
+    align=left,
+    text=white
+  ]
+  at ([xshift=2cm,yshift=-2cm]current page.north west)
+  {
+    {\Large \myName}\\[2em]
+    % {\bfseries\Huge \myPlainTitle}\\[1em]
+    % {\bfseries\Huge A Dummy Thesis Title: Towards Something Great and Possibly Another Subtitle}\\[1em]
+    % {\bfseries\Huge \myTitle}\\[1em]
+    % {\bfseries\Huge \myPlainTitle}\\[1em]
+    {\bfseries\Huge \myTitle}\\[1em]
+    {\bfseries\Huge \mySubTitle}
+  };
+
+  % 3) Bottom-left text block: dissertation info
+  \node[
+    anchor=south west,
+    align=left,
+    text=white
+  ]
+  at ([xshift=2cm,yshift=2cm]current page.south west)
+  {
+    {\large Diss. ETH No. \myDissNumber}
+  };
+\end{tikzpicture}
+
+\cleardoublepage

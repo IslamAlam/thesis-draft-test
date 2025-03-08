@@ -1,0 +1,89 @@
+\begin{titlepage}
+  \thispagestyle{empty}
+
+  % Using TikZ for centering, but without a background fill.
+  \begin{tikzpicture}[remember picture, overlay]
+    % Place the text block at the center of the page.
+    \node[
+      anchor=center,
+      align=center,
+      text=black  % Use black (or your preferred color) for text now.
+    ]
+    at (current page text area.center)
+    {
+      % Use a minipage to control the text width.
+      \begin{minipage}{0.8\textwidth}
+      % Increase line spacing only for this block
+        \begin{spacing}{1.2}
+          \centering
+          % \begin{center}
+          % Enlarge all text using \Huge as the base font size.
+          \Large
+          % Add some vertical space at the top of the page
+          % \vspace*{3cm}
+          \vspace*{6em}
+          
+          % Dissertation number
+          % {\large Diss. ETH No. 99999}\\[2em]
+          \spacedlowsmallcaps{Diss. ETH No. \myDissNumber}\\[2em]
+
+          \vspace*{2em}
+          
+          % Main title (split across multiple lines if desired)
+          % {\bfseries\LARGE A DUMMY THESIS TITLE:}\\
+          % {\bfseries\LARGE TOWARDS SOMETHING GREAT}\\
+          % {\bfseries\LARGE AND POSSIBLY ANOTHER SUBTITLE}\\[2em]
+          \begingroup
+            \spacedallcaps{\myTitle}\\[1em]
+            \spacedlowsmallcaps{\mySubTitle}\\[2em]
+          \endgroup
+
+          \vspace*{2em}
+          
+          % Submission statement
+          % a thesis submitted to attain the degree of\\
+          % \textit{doctor of sciences}\\
+          % (Dr. sc. ETH Zurich)\\[2em]
+          \begingroup
+            A dissertation submitted to attain the degree of\\[0.5em]
+            \spacedlowsmallcaps{Doctor of Sciences} of
+            \spacedlowsmallcaps{ETH Zurich} \\
+            (Dr.\ sc.\ ETH Zurich)\\[2em]
+          \endgroup
+
+          \vspace*{2em}
+
+          \begingroup
+            % Author information
+            presented by\\[0.5em]
+            \spacedlowsmallcaps{\myName}\\[0.5em]
+            \textit{MSc in Data Science, ETH Zurich, Switzerland}\\
+            born on 1 April 1990\\
+            citizen of Egypt\\[2em]
+          \endgroup
+
+          \vspace*{2em}  
+          \begingroup
+            % Acceptance info
+            accepted on the recommendation of\\[0.5em]
+            Prof. Dr. Foo Bar, examiner\\
+            Prof. Dr. Baz Quux, co-examiner\\
+            Prof. Dr. Lorem Ipsum, co-examiner\\[2em]
+          \endgroup
+
+          \vfill
+          \vspace*{2em}
+          
+          % Year at the bottom
+          \myTime
+          
+          % Add some space at the bottom of the page
+          % \vspace*{3cm}
+          \vspace*{3em}
+        % \end{center}
+        \end{spacing}
+      \end{minipage}
+    };
+  \end{tikzpicture}
+\end{titlepage}
+    % \cleardoublepage

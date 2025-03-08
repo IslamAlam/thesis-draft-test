@@ -1,0 +1,36 @@
+% preamble/general.tex
+% ------------------------------------------------------------------
+% General Preamble Settings
+%
+% This file loads general configuration files for your document.
+% It includes meta information and ETH corporate colour definitions.
+%
+% Files referenced:
+%   - preamble/meta.tex  : Contains meta data (titles, author info, etc.)
+%   - preamble/eth.tex   : Contains ETH corporate colour definitions
+%
+% Include this file in your main document preamble:
+%   \input{preamble/general.tex}
+% ------------------------------------------------------------------
+
+\input{preamble/meta.tex} % Load meta information (title, author, etc.)
+\input{preamble/eth.tex}  % Load ETH corporate colours and shade definitions
+
+% Additional general configurations (packages, macros, etc.) can be added below.
+
+
+\ExplSyntaxOn
+% Define a function for string substitution
+\cs_new:Npn \minna_replace:nn #1 #2
+  {
+    \tl_replace_all:Nnn \l_tmpa_tl {#1} {#2}
+  }
+
+% Wrapper macro for ease of use
+\NewDocumentCommand{\ReplaceString}{ m m m }
+  {
+    \tl_set:Nn \l_tmpa_tl {#1}
+    \minna_replace:nn {#2} {#3}
+    \tl_use:N \l_tmpa_tl
+  }
+\ExplSyntaxOff

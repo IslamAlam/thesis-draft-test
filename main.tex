@@ -1,0 +1,120 @@
+\RequirePackage{silence} % :-\
+    \WarningFilter{scrreprt}{Usage of package `titlesec'}
+    \WarningFilter{scrreprt}{Activating an ugly workaround}
+    \WarningFilter{titlesec}{Non standard sectioning command detected}
+    \WarningFilter{titlesec}{Non standard sectioning command /\section detected}
+
+\documentclass[%
+  % --- Options for scrreprt (KOMA‑script) ---
+  11pt,               % Font size (common choices: 10pt, 11pt, 12pt)
+  a4paper,            % Paper size (a4paper, letterpaper, etc.)
+  twoside,            % Use a two-sided layout (oneside is also available)
+  openright,          % Chapters always start on a right-hand page
+  titlepage,          % Use a separate title page
+  headinclude,        % Include header in the type area calculation
+  footinclude,        % Include footer in the type area calculation
+  BCOR=5mm,           % Binding correction (adjust for binding)
+  DIV=calc,           % Automatically calculate the page layout division
+  numbers=noenddot    % Controls numbering (e.g., no end dot after section numbers)
+]{scrreprt}
+
+%-----------------------------
+% Encoding, Fonts & Packages
+%-----------------------------
+\usepackage[utf8]{inputenc}       % Input encoding
+\usepackage[T1]{fontenc}          % Font encoding
+\usepackage{lmodern}              % Latin Modern fonts (optional)
+\usepackage[base]{babel}
+% ---------------------------------------------------------
+% Options for classicthesis package:
+\usepackage[
+  % Use Euler numbers for chapter headings
+  eulerchapternumbers,
+  % Use lined headers (adds a horizontal line above headers)
+  linedheaders,
+  % Control draft mode (set to false for final version)
+  drafting=false,
+  % Enable proper PDF spacing (improves output)
+  pdfspacing=true
+  % Other classicthesis options include:
+  %   thesis           - for a thesis-style layout
+  %   eulermath        - use Euler fonts for mathematics
+  %   subfig           - support for subfigures
+  %   openbib          - open bibliography style (without enclosing brackets)
+  %   intoc            - include figures and tables in the ToC
+  %   many more…       - see the classicthesis documentation for a complete list.
+]{classicthesis}
+\usepackage{lipsum}               % Dummy text
+\usepackage{booktabs}             % For nicer tables
+\usepackage{xstring}              % string manipulation
+\usepackage{hyperref}             % For hyperlinks and pdf bookmarks
+\usepackage{bookmark}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{textcase}
+\usepackage{xparse}
+\usepackage{setspace}
+\usepackage{tikzpagenodes}
+
+% \usepackage{expl3}
+
+%------------------------------------------------
+% Load General Preamble Settings
+% This file references both meta.tex and eth.tex.
+%------------------------------------------------
+\input{preamble/general.tex}
+
+%-----------------------------
+% Document Start
+%-----------------------------
+\begin{document}
+% Standard LaTeX font size commands:
+%
+% \tiny         - Very small text (the smallest available size)
+% \scriptsize   - Slightly larger than \tiny, often used for scripts or captions
+% \footnotesize - Used for footnotes and similar small text
+% \small        - A bit smaller than the default text size
+% \normalsize   - The default text size (set by your document class option)
+% \large        - One step larger than normalsize
+% \Large        - Larger than \large
+% \LARGE        - Even larger than \Large
+% \huge         - Quite large text, typically used for headings
+% \Huge         - The largest available size
+
+%********************************************************************
+% Frontmatter
+%********************************************************************
+\include{frontbackmatter/dirtytitlepage}
+\include{frontbackmatter/titlepage}
+\include{frontbackmatter/titleback}
+\cleardoublepage\include{frontbackmatter/dedication}
+\cleardoublepage\include{frontbackmatter/abstract}
+\cleardoublepage\include{frontbackmatter/acknowledgments}
+\pagestyle{scrheadings}
+\cleardoublepage\include{frontbackmatter/contents}
+
+%********************************************************************
+% Mainmatter
+%********************************************************************
+\cleardoublepage
+\pagestyle{scrheadings}
+\pagenumbering{arabic}
+\cleardoublepage
+\include{chapters/introduction/main}
+
+%********************************************************************
+% Backmatter
+%********************************************************************
+\appendix
+\cleardoublepage
+\def\dir{chapters/99-A-appendix}
+\include{\dir/main}
+
+% Other Back Matter
+\pdfbookmark[-1]{Back Matter}{back} % Dummy part bookmark for back matter
+\cleardoublepage\include{frontbackmatter/bibliography}
+\bookmarksetup{startatroot}
+\cleardoublepage\include{frontbackmatter/cv}
+\cleardoublepage\include{frontbackmatter/publications}
+
+\end{document}

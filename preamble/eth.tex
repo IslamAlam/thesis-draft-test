@@ -1,0 +1,201 @@
+% eth.tex
+% Defines ETH brand colors based on:
+% https://ethz.ch/staffnet/en/service/communication/corporate-design/colours.html
+% 
+% ------------------------------------------------------------------
+% ETH Corporate Design – Primary Colors and Colour Shades Definitions
+%
+% PRIMARY ETH CORPORATE COLORS
+%
+% Colour       RGB             HEX       CMYK                 Pantone    RAL
+% ----------------------------------------------------------------------------
+% ETH Blue     33, 92, 175     #215CAF   100,57,0,0           2935       5005 Signalblau
+% ETH Petrol   0, 120, 148     #007894   100,25,30,10         633        5009 Azurblau
+% ETH Green    98, 115, 19     #627313   55,10,100,30         364        6010 Grasgrün
+% ETH Bronze   142, 103, 19    #8E6713   30,36,100,25         4495       7008 Khakigrau
+% ETH Red      183, 53, 45     #B7352D   0,90,80,17           1797       3031 Orientrot
+% ETH Purple   167, 17, 122    #A7117A   22,100,0,10          234        4006 Verkehrspurpur
+% ETH Grey     111, 111, 111   #6F6F6F   0,0,0,70             Cool Gray 11   7046 Telegrau 2
+% ------------------------------------------------------------------
+% ETH Corporate Design – Colour Shades Definitions
+%
+% 1. ETH Blue Shades
+% 2. ETH Petrol Shades
+% 3. ETH Green Shades
+% 4. ETH Bronze Shades
+% 5. ETH Red Shades
+% 6. ETH Purple Shades
+% 7. ETH Grey Shades
+% 
+% Last updated: 2025-03-08
+%
+% Usage:
+%   \input{eth.tex}
+%   \textcolor{ETHBlue}{Hello ETH!}
+% Usage in your main .tex:
+%   \usepackage{xcolor} % or colortbl, etc.
+%   \input{eth.tex}
+%   \textcolor{ETHBlue}{Hello from ETH!}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesFile{eth.tex}[2025/03/08 v1.0 ETH brand color definitions]
+
+\RequirePackage{xcolor}
+
+% ==============================================================
+% Primary ETH Corporate Colors
+% ==============================================================
+\definecolor{ETHBlue}{HTML}{215CAF}    % ETH Blue: RGB: 33, 92, 175; CMYK: 100,57,0,0; Pantone: 2935; RAL: 5005 Signalblau
+\definecolor{ETHPetrol}{HTML}{007894}   % ETH Petrol: RGB: 0,120,148; CMYK: 100,25,30,10; Pantone: 633; RAL: 5009 Azurblau
+\definecolor{ETHGreen}{HTML}{627313}    % ETH Green: RGB: 98,115,19; CMYK: 55,10,100,30; Pantone: 364; RAL: 6010 Grasgrün
+\definecolor{ETHBronze}{HTML}{8E6713}    % ETH Bronze: RGB: 142,103,19; CMYK: 30,36,100,25; Pantone: 4495; RAL: 7008 Khakigrau
+\definecolor{ETHRed}{HTML}{B7352D}       % ETH Red: RGB: 183,53,45; CMYK: 0,90,80,17; Pantone: 1797; RAL: 3031 Orientrot
+\definecolor{ETHPurple}{HTML}{A7117A}     % ETH Purple: RGB: 167,17,122; CMYK: 22,100,0,10; Pantone: 234; RAL: 4006 Verkehrspurpur
+\definecolor{ETHGrey}{HTML}{6F6F6F}       % ETH Grey: RGB: 111,111,111; CMYK: 0,0,0,70; Pantone: Cool Gray 11; RAL: 7046 Telegrau 2
+
+
+% ------------------------------------------------------------------
+% Extended / Complementary Color Palette
+% ------------------------------------------------------------------
+\definecolor{ETHTeal}{HTML}{008C95}
+\definecolor{ETHGreen}{HTML}{00B38B}
+\definecolor{ETHDarkBlue}{HTML}{1D2447}
+\definecolor{ETHLightBlue}{HTML}{5BB6D6}
+\definecolor{ETHOrange}{HTML}{F39200}
+\definecolor{ETHRed}{HTML}{C8002A}
+\definecolor{ETHWarmGray}{HTML}{DAD7D2}
+\definecolor{ETHBeige}{HTML}{D7CEC1}
+\definecolor{ETHDarkBrown}{HTML}{7F4F3C}
+\definecolor{ETHDarkPink}{HTML}{EB67BD}
+\definecolor{ETHDarkPurple}{HTML}{5F2167}
+\definecolor{ETHDarkMagenta}{HTML}{A3488E}
+\definecolor{ETHDarkGray}{HTML}{333333}
+\definecolor{ETHGray}{HTML}{75787B}
+\definecolor{ETHLightGray}{HTML}{E2E2E2}
+\definecolor{ETHWhite}{HTML}{FFFFFF}
+\definecolor{ETHBlack}{HTML}{000000}
+
+% ==============================================================
+% 1. ETH Blue Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 233, 239, 247   | E9EFF7   | 10, 6, 0, 0
+\definecolor{ETHBlue10}{HTML}{E9EFF7}
+% 20%   | 211, 222, 239   | D3DEEF   | 20, 11, 0, 0
+\definecolor{ETHBlue20}{HTML}{D3DEEF}
+% 40%   | 166, 190, 223   | A6BEDF   | 40, 23, 0, 0
+\definecolor{ETHBlue40}{HTML}{A6BEDF}
+% 60%   | 122, 157, 207   | 7A9DCF   | 60, 34, 0, 0
+\definecolor{ETHBlue60}{HTML}{7A9DCF}
+% 80%   | 77, 125, 191    | 4D7DBF   | 80, 46, 0, 0
+\definecolor{ETHBlue80}{HTML}{4D7DBF}
+% 120%  | 8, 64, 126      | 08407E   | 100, 62, 0, 30
+\definecolor{ETHBlue120}{HTML}{08407E}
+
+% ==============================================================
+% 2. ETH Petrol Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 231, 244, 247   | E7F4F7   | 12, 0, 5, 0
+\definecolor{ETHPetrol10}{HTML}{E7F4F7}
+% 20%   | 204, 228, 234   | CCE4EA   | 20, 3, 7, 0
+\definecolor{ETHPetrol20}{HTML}{CCE4EA}
+% 40%   | 153, 202, 213   | 99CAD5   | 40, 7, 12, 4
+\definecolor{ETHPetrol40}{HTML}{99CAD5}
+% 60%   | 102, 175, 192   | 66AFC0   | 60, 14, 18, 6
+\definecolor{ETHPetrol60}{HTML}{66AFC0}
+% 80%   | 51, 149, 171    | 3395AB   | 80, 20, 24, 8
+\definecolor{ETHPetrol80}{HTML}{3395AB}
+% 120%  | 0, 89, 109      | 00596D   | 100, 25, 30, 38
+\definecolor{ETHPetrol120}{HTML}{00596D}
+
+% ==============================================================
+% 3. ETH Green Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 239, 241, 231   | EEF1E7   | 6, 1, 10, 3
+\definecolor{ETHGreen10}{HTML}{EEF1E7}
+% 20%   | 224, 227, 208   | E0E3D0   | 11, 2, 20, 6
+\definecolor{ETHGreen20}{HTML}{E0E3D0}
+% 40%   | 192, 199, 161   | C0C7A1   | 22, 4, 40, 12
+\definecolor{ETHGreen40}{HTML}{C0C7A1}
+% 60%   | 161, 171, 113   | A1AB71   | 33, 6, 60, 18
+\definecolor{ETHGreen60}{HTML}{A1AB71}
+% 80%   | 129, 143, 66    | 818F42   | 44, 8, 80, 24
+\definecolor{ETHGreen80}{HTML}{818F42}
+% 120%  | 54, 82, 19      | 365213   | 55, 10, 100, 65
+\definecolor{ETHGreen120}{HTML}{365213}
+
+% ==============================================================
+% 4. ETH Bronze Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 244, 240, 231   | F4F0E7   | 3, 4, 10, 3
+\definecolor{ETHBronze10}{HTML}{F4F0E7}
+% 20%   | 232, 225, 208   | E8E1D0   | 6, 7, 20, 5
+\definecolor{ETHBronze20}{HTML}{E8E1D0}
+% 40%   | 210, 194, 161   | D2C2A1   | 12, 14, 40, 10
+\definecolor{ETHBronze40}{HTML}{D2C2A1}
+% 60%   | 187, 164, 113   | BBA471   | 18, 22, 60, 15
+\definecolor{ETHBronze60}{HTML}{BBA471}
+% 80%   | 165, 133, 66    | A58542   | 24, 29, 80, 20
+\definecolor{ETHBronze80}{HTML}{A58542}
+% 120%  | 112, 79, 18     | 704F12   | 30, 36, 100, 55
+\definecolor{ETHBronze120}{HTML}{704F12}
+
+% ==============================================================
+% 5. ETH Red Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 248, 235, 234   | F8EBEA   | 0, 9, 6, 0
+\definecolor{ETHRed10}{HTML}{F8EBEA}
+% 20%   | 241, 215, 213   | F1D7D5   | 0, 18, 13, 4
+\definecolor{ETHRed20}{HTML}{F1D7D5}
+% 40%   | 226, 174, 171   | E2AEAB   | 0, 36, 26, 8
+\definecolor{ETHRed40}{HTML}{E2AEAB}
+% 60%   | 212, 134, 129   | D48681   | 0, 54, 39, 11
+\definecolor{ETHRed60}{HTML}{D48681}
+% 80%   | 197, 93, 87     | C55D57   | (using HEX)
+\definecolor{ETHRed80}{HTML}{C55D57}
+% 120%  | 150, 39, 45     | 96272D   | 0, 100, 80, 40
+\definecolor{ETHRed120}{HTML}{96272D}
+
+% ==============================================================
+% 6. ETH Purple Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 248, 232, 243   | F8E8F3   | 2, 10, 0, 1
+\definecolor{ETHPurple10}{HTML}{F8E8F3}
+% 20%   | 239, 208, 227   | EFD0E3   | 4, 20, 0, 1
+\definecolor{ETHPurple20}{HTML}{EFD0E3}
+% 40%   | 220, 158, 201   | DC9EC9   | 7, 40, 0, 4
+\definecolor{ETHPurple40}{HTML}{DC9EC9}
+% 60%   | 202, 108, 174   | CA6CAE   | 13, 60, 0, 6
+\definecolor{ETHPurple60}{HTML}{CA6CAE}
+% 80%   | 183, 59, 146    | B73B92   | 18, 80, 0, 8
+\definecolor{ETHPurple80}{HTML}{B73B92}
+% 120%  | 140, 10, 89     | 8C0A59   | 22, 100, 0, 35
+\definecolor{ETHPurple120}{HTML}{8C0A59}
+
+% ==============================================================
+% 7. ETH Grey Shades
+% ==============================================================
+% Shade | RGB             | HEX      | CMYK
+% ------|-----------------|----------|---------------
+% 10%   | 241, 241, 241   | F1F1F1   | 0, 0, 0, 7
+\definecolor{ETHGrey10}{HTML}{F1F1F1}
+% 20%   | 226, 226, 226   | E2E2E2   | 0, 0, 0, 14
+\definecolor{ETHGrey20}{HTML}{E2E2E2}
+% 40%   | 197, 197, 197   | C5C5C5   | 0, 0, 0, 28
+\definecolor{ETHGrey40}{HTML}{C5C5C5}
+% 60%   | 169, 169, 169   | A9A9A9   | 0, 0, 0, 42
+\definecolor{ETHGrey60}{HTML}{A9A9A9}
+% 80%   | 140, 140, 140   | 8C8C8C   | 0, 0, 0, 56
+\definecolor{ETHGrey80}{HTML}{8C8C8C}
+% 120%  | 87, 87, 87      | 575757   | 0, 0, 0, 81
+\definecolor{ETHGrey120}{HTML}{575757}
