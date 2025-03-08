@@ -1,7 +1,17 @@
 % frontbackmatter/titleback.tex
 \thispagestyle{empty}
-\begin{center}
-    {\Huge Title Back}\\[2em]
-    \textit{(Dummy text for the title back page)}
-\end{center}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=south, align=left, text=black] at (current page text area.south) {
+      \begin{minipage}{1.0\textwidth}
+         \myName\\[1ex]
+         \textit{\myPlainTitle, }\\[1ex]
+         \textcopyright\ \myTime\\[1ex]
+         \spacedlowsmallcaps{DOI}: \myDOI\\[1ex]
+    
+         {\footnotesize Content of this thesis is licensed under a \href{https://creativecommons.org/licenses/by/3.0/}{Creative Commons Attribution 3.0}, except the scientific papers reprinted in the thesis, that are subject to their own copyright protection.
+        }
+      \end{minipage}
+
+  };
+\end{tikzpicture}
 \cleardoublepage
