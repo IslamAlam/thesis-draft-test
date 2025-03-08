@@ -1,4 +1,52 @@
-% frontbackmatter/cv.tex
-\chapter*{Curriculum Vitae}
-\lipsum[11]
+%*******************************************************
+% CV
+%*******************************************************
+\pdfbookmark[1]{Curriculum Vitae}{cv}
+
+% \section*{Personal data}
+
+\chapter*{Curriculum Vit\ae}
+    \pagestyle{plain}
+    \begin{cv}{\spacedallcaps{Curriculum Vit\ae}}
+    % \begin{cv}{}
+        \pdfbookmark[1]{Personal Data}{PersDat}
+        \begin{cvlist}{\spacedlowsmallcaps{Personal Data}}\label{PersDat}  % should be fixed one day
+            \item[Name]   \myName
+            \item[Date of Birth] \myDateofBirth
+            \item[Place of Birth] \myPlaceofBirth
+            \item[Citizen of] \myCitizenship
+            \item   \url{http://www.miede.de} 
+        \end{cvlist}
+
+       % \clearpage
+        % %\pdfbookmark[1]{Irgendwas}{irgendwas}
+        % \begin{cvlist}{\spacedlowsmallcaps{Irgendwas}}\label{irgendwas}
+        %     \item[Fusce mauris]   Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue quam, in hendrerit risus eros eget felis. 
+        %     \item[Nulla facilisi] Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla. Nulla egestas. 
+        %     \item[Curabitur a leo] Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+        % \end{cvlist}
+        \pdfbookmark[1]{Education}{Education}
+        \begin{cvlist}{\spacedlowsmallcaps{Education}}\label{Education}
+            \item[1896 --~1900]
+            Eidgenössisches Polytechnikum, \\
+            Zürich, Switzerland\\
+            \emph{Final degree:} Diploma
+            \item[1895 --~1896]%
+            Aargauische Kantonsschule (grammar school)\\
+            Aarau, Switzerland \\
+            \emph{Final degree:} Matura (university entrance diploma)
+
+            \item[--~July 1894]%
+            Luitpold-Gymnasium (grammar school)\\
+            Munich, Germany
+  
+        \end{cvlist}
+
+        \pdfbookmark[1]{Employment}{Employment}
+        \begin{cvlist}{\spacedlowsmallcaps{Employment}}\label{Employment}
+            \item[June 1902 --]%
+            Technical Expert, III Class\\
+            \emph{Federal Office for Intellectual Property},\\ Bern, Switzerland
+        \end{cvlist}
+    \end{cv}
 \cleardoublepage

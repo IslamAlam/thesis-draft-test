@@ -21,10 +21,11 @@
 %-----------------------------
 % Encoding, Fonts & Packages
 %-----------------------------
-\usepackage[utf8]{inputenc}       % Input encoding
-\usepackage[T1]{fontenc}          % Font encoding
+\usepackage[utf8]{inputenc}       % Input encoding UTF-8 support
+\usepackage[T1]{fontenc}          % Font encoding 
 \usepackage{lmodern}              % Latin Modern fonts (optional)
-\usepackage[base]{babel}
+\usepackage[english, ngerman]{babel} % Load both languages
+
 % ---------------------------------------------------------
 % Options for classicthesis package:
 \usepackage[
@@ -55,6 +56,7 @@
 \usepackage{xparse}
 \usepackage{setspace}
 \usepackage{tikzpagenodes}
+\usepackage[LabelsAligned]{currvita} % nice cv style
 
 % \usepackage{expl3}
 
@@ -63,6 +65,15 @@
 % This file references both meta.tex and eth.tex.
 %------------------------------------------------
 \input{preamble/general.tex}
+
+
+%********************************************************************
+% Bibliographies
+%*******************************************************
+% Bibliography
+\addbibresource[label=ownpubs]{ownpubs.bib}
+\addbibresource{bibliography.bib}
+\addbibresource{misc.bib}
 
 %-----------------------------
 % Document Start
@@ -84,13 +95,14 @@
 %********************************************************************
 % Frontmatter
 %********************************************************************
+\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
 \include{frontbackmatter/dirtytitlepage}
 \include{frontbackmatter/titlepage}
 \include{frontbackmatter/titleback}
 \cleardoublepage\include{frontbackmatter/dedication}
 \cleardoublepage\include{frontbackmatter/abstract}
 \cleardoublepage\include{frontbackmatter/acknowledgments}
-\pagestyle{scrheadings}
+\pagestyle{scrheadings} % Show chapter titles as 
 \cleardoublepage\include{frontbackmatter/contents}
 
 %********************************************************************
@@ -98,7 +110,7 @@
 %********************************************************************
 \cleardoublepage
 \pagestyle{scrheadings}
-\pagenumbering{arabic}
+\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
 \cleardoublepage
 \include{chapters/introduction/main}
 
