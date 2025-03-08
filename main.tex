@@ -24,27 +24,35 @@
 \usepackage[utf8]{inputenc}       % Input encoding UTF-8 support
 \usepackage[T1]{fontenc}          % Font encoding 
 \usepackage{lmodern}              % Latin Modern fonts (optional)
-\usepackage[english, ngerman]{babel} % Load both languages
+% \usepackage[main=english,ngerman]{babel} % Load both languages
+\usepackage[main=american,ngerman]{babel} % Load both languages
+
 
 % ---------------------------------------------------------
 % Options for classicthesis package:
-\usepackage[
-  % Use Euler numbers for chapter headings
-  eulerchapternumbers,
-  % Use lined headers (adds a horizontal line above headers)
-  linedheaders,
-  % Control draft mode (set to false for final version)
-  drafting=false,
-  % Enable proper PDF spacing (improves output)
-  pdfspacing=true
-  % Other classicthesis options include:
-  %   thesis           - for a thesis-style layout
-  %   eulermath        - use Euler fonts for mathematics
-  %   subfig           - support for subfigures
-  %   openbib          - open bibliography style (without enclosing brackets)
-  %   intoc            - include figures and tables in the ToC
-  %   many more…       - see the classicthesis documentation for a complete list.
-]{classicthesis}
+% \usepackage[
+%   % Use Euler numbers for chapter headings
+%   eulerchapternumbers,
+%   % Use lined headers (adds a horizontal line above headers)
+%   linedheaders,
+%   % Control draft mode (set to false for final version)
+%   drafting=false,
+%   % Enable proper PDF spacing (improves output)
+%   pdfspacing=true
+%   % Other classicthesis options include:
+%   %   thesis           - for a thesis-style layout
+%   %   eulermath        - use Euler fonts for mathematics
+%   %   subfig           - support for subfigures
+%   %   openbib          - open bibliography style (without enclosing brackets)
+%   %   intoc            - include figures and tables in the ToC
+%   %   many more…       - see the classicthesis documentation for a complete list.
+% ]{classicthesis}
+
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+\input{preamble/classicthesis-config}
+
 \usepackage{lipsum}               % Dummy text
 \usepackage{booktabs}             % For nicer tables
 \usepackage{xstring}              % string manipulation
