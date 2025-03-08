@@ -120,13 +120,44 @@
 \pagestyle{scrheadings}
 \pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
 \cleardoublepage
+%-----------------------------------------------
+% Part 1: Foundations and Background (Introduction)
+%-----------------------------------------------
+\part{Foundations and Background}\label{pt:foundations}
+
 \include{chapters/introduction/main}
+
+
+
+%-----------------------------------------------
+% Part 2: Collected Papers
+%-----------------------------------------------
+\part{Collected Papers}\label{pt:collectedpapers}
+
+\chapter{Paper One: Title of Paper One}
+\lipsum[3-4] % Replace with the content or summary of your first paper
+
+
+\chapter{Paper Two: Title of Paper Two}
+\lipsum[5-6] % Replace with the content or summary of your second paper
+
+\chapter{Paper Three: Title of Paper Three}
+\lipsum[7-8] % Replace with the content or summary of your third paper
+
+%-----------------------------------------------
+% Part 3: Conclusions
+%-----------------------------------------------
+\part{Conclusions}\label{pt:conclusions}
+\chapter{Conclusion}
+\lipsum[9-10] % Replace with your conclusion content
+
 
 %********************************************************************
 % Backmatter
 %********************************************************************
 \appendix
 \cleardoublepage
+\part{Appendix}
 \def\dir{chapters/99-A-appendix}
 \include{\dir/main}
 
