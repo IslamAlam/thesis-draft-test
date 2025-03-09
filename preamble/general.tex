@@ -50,13 +50,50 @@
 % Biblatex
 \input{preamble/biblatex}
 
+% Footnote without number
+% \newcommand\blfootnote[1]{%
+%   \begingroup
+%   \renewcommand\thefootnote{}\footnote{#1}%
+%   \addtocounter{footnote}{-1}%
+%   \endgroup
+% }
+% \newcommand\blfootnote[1]{%
+%   \begingroup
+%     \renewcommand\thefootnote{}%
+%     \footnote{%
+%         % \begingroup
+%         % \linespread{1}\selectfont % or \begin{spacing}{1} ... \end{spacing}
+%         % \vspace{0.5em}%    <-- Adds extra vertical space at the top of the footnote
+%         % Set the vertical gap between the main text and the footnotes locally:
+%         \setlength{\skip\footins}{10em}%
+%         % \setlength{\skip\footins}{12pt plus 4pt minus 2pt}
+%         \noindent %         <-- Removes the first-line indentation
+%         \textit{#1}%       <-- Italicizes the footnote text
+%         % \endgroup
+%     }%
+%     \addtocounter{footnote}{-1}%
+%   \endgroup
+% }
+% Set the vertical gap between the main text and the footnotes
+\setlength{\skip\footins}{4em plus 4em minus 2em} % sets the gap for all footnotes
+% \setlength{\footnotemargin}{-.5em}%
+\newcommand\blfootnote[1]{%
+  \begingroup
+    \renewcommand\thefootnote{}%
+    \footnote{%
+      \noindent
+      \textit{#1}%
+    }%
+    \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \ExplSyntaxOn
 % Define a function for string substitution
-\cs_new:Npn \minna_replace:nn #1 #2
-  {
-    \tl_replace_all:Nnn \l_tmpa_tl {#1} {#2}
-  }
+% \cs_new:Npn \minna_replace:nn #1 #2
+%   {
+%     \tl_replace_all:Nnn \l_tmpa_tl {#1} {#2}
+%   }
 
 % Wrapper macro for ease of use
 \NewDocumentCommand{\ReplaceString}{ m m m }
